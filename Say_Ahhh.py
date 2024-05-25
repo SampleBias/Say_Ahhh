@@ -14,6 +14,8 @@ headers = {
     'Authorization': f'Bearer {api_key}'
 }
 
+#Create Payload
+
 def create_payload(system_prompt_content, user_prompt, temperature):
     return {
         "model": "gpt-3.5-turbo",
