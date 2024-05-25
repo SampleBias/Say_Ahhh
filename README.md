@@ -10,6 +10,50 @@ First Committ
 
 The script takes as input a system prompt content, a file containing user prompts, and various configuration parameters. It then iterates over each user prompt, combines it with the system prompt, and sends the prompt pair to the OpenAI API for response generation. The generated responses are recorded along with the corresponding prompts in a CSV file for further examination.
 
++------------------------+
+|      Configuration     |
+| - API key              |
+| - System prompt        |
+| - User prompts file    |
+| - Output CSV file      |
+| - API temperature      |
+| - API URL              |
++-----------+------------+
+            |
+            v
++-----------+------------+
+| Read user prompts from |
+|       text file        |
++-----------+------------+
+            |
+            v
++-----------+------------+
+| Prepare payload with   |
+| system and user messages|
++-----------+------------+
+            |
+            v
++-----------+------------+
+|   Send POST request    |
+|    to OpenAI API       |
++-----------+------------+
+            |
+            v
++-----------+------------+
+|   Handle response      |
++-----------+------------+
+            |
+            v
++-----------+------------+
+| Write response to CSV  |
+|         file           |
++-----------+------------+
+            |
+            v
++-----------+------------+
+|  Error handling (if any)|
++------------------------+
+
 ## Usage
 
 1. **Prerequisites**: Before using the script, ensure you have obtained an API key from OpenAI and have Python installed on your system.
